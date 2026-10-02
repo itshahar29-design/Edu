@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  /* Telegram SDK sahifaga --tg-theme-* CSS o'zgaruvchilarini avtomatik
+     joylaydi. Fallback rang oddiy brauzerda ochilganda ishlatiladi. */
+  background-color: var(--tg-theme-bg-color, #f3f4f6);
+  color: var(--tg-theme-text-color, #111827);
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    Helvetica,
+    Arial,
+    sans-serif;
+  -webkit-tap-highlight-color: transparent;
+}
+
+button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+input,
+select {
+  font-size: 16px; /* iOS Safari'da avtomatik zoom bo'lmasligi uchun */
+}
